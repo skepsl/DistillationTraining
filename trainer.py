@@ -29,7 +29,7 @@ class Trainer:
     def train(self, train_iter, val_iter, length):
         train_size, val_size = length
         if self.args.wandb:
-            wandb.init(project="ESW-Final-Project", entity="nadenny")
+            wandb.init(project="Multi_Exit", entity="nadenny")
             wandb.config = {}
             print('\n')
             time.sleep(1)
