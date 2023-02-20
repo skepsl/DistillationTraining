@@ -16,7 +16,7 @@ warnings.filterwarnings('ignore')
 
 class Trainer:
     def __init__(self, args):
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.device = torch.device("cuda:3" if torch.cuda.is_available() else "cpu")
 
         self.model = MultiExit().to(self.device)
 
@@ -29,7 +29,7 @@ class Trainer:
     def train(self, train_iter, val_iter, length):
         train_size, val_size = length
         if self.args.wandb:
-            wandb.init(project="Multi_Exit", entity="nadenny")
+            wandb.init(project="Multi-ExitProject", entity="ndn")
             wandb.config = {}
             print('\n')
             time.sleep(1)

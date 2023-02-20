@@ -28,7 +28,7 @@ def args():
                         nargs='*', type=int, help=hpstr)
 
     hpstr = "Whether log to wandb"
-    parser.add_argument('--wandb', default=False,
+    parser.add_argument('--wandb', default=True,
                         nargs='*', type=int, help=hpstr)
 
     args = parser.parse_args()
